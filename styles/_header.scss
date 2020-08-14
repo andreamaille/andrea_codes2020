@@ -1,10 +1,28 @@
 header {
     height: 100vh;
     overflow: hidden;
-    background-color: whitesmoke;
+    background-color: $white;
     position: relative; 
 }
 
-// .header_main-content {
-//     background: $white;
-// }
+.header_main-content {
+    position: absolute;
+    background: $white;
+    border: 1px solid $black;
+    z-index: 10;
+    width: 40%; 
+    right: 0;
+    left: 0;
+    top: 30%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.social-icons ul {
+    display: flex;
+    justify-content: center;
+    li {
+        font-size: $font-size-base;
+        margin: 5px;
+    }
+}

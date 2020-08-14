@@ -15,5 +15,5 @@ pathArray.forEach(path => {
 
   gsap.set(path, { strokeDasharray: l });
 
-  gsap.fromTo(path, 10, { strokeDashoffset: l }, { strokeDashoffset: 0 });
+  gsap.fromTo(path, 5, { strokeDashoffset: l }, { strokeDashoffset: 0 });
 });

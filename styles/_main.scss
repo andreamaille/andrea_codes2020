@@ -1,6 +1,5 @@
 body {
     max-width: 1500px;
-    font-family: 'Playfair Display', serif;
     margin: 0 auto;
 }
 
@@ -8,4 +7,15 @@ ul, li {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+a {
+    color: $black;
+    transition: color 0.2s ease;
+    &:hover, 
+    &:focus,
+    &:active {
+        color: $secondary;
+    }
+
 }
