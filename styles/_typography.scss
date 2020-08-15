@@ -2,21 +2,44 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
 
+@mixin displayFont ($sizeValue) {
+    font-size: ($sizeValue/20) * 1rem;
+    font-family: 'Playfair Display', serif;
+    // font-weight: 600;
+    line-height: 1.2;
+}
 
+@mixin titleFont ($sizeValue) {
+    font-size: ($sizeValue/20) * 1rem;
+    font-family: 'Playfair Display', serif;
+    line-height: 1;
+}
+
+@mixin bodyFont ($sizeValue) {
+    font-size: ($sizeValue/20) * 1rem;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
 
 body { 
-    font-family: 'Montserrat', sans-serif;
+    @include bodyFont (20);
 }
 
 h1 {
-    font-family: 'Playfair Display', serif;
+    @include displayFont (45);
+    margin: 8px;
 }
 
 h2 {
+    @include bodyFont (22);
     text-transform: uppercase;
     font-weight: $font-weight-normal;
+    margin-bottom: 5px;
 }
 
+h3 {
+    @include displayFont (28);
+}
 .color-secondary {
     color: $secondary;
 }

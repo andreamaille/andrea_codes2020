@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/b37c5bc39b.js"></script>
+
     <title>andrea_codes</title>
 </head>
 
 <body>
     <header>
         <nav>
-            <h2>Andrea<span class="color-secondary">.</span></h2>
+            <h3>
+                <a href="#home" aria-label="Go to homepage">Andrea<span class="color-secondary">.</span></a>
+            </h3>
             <ul>
                 <li><a href="#home" aria-label="Go to homepage">Home</a></li>
                 <li><a href="#about" aria-label="Go to About Me section">About Me</a></li>
@@ -21,11 +24,24 @@
                 <li><a href="#skills" aria-label="Go to Portfolio section">Skills</a></li>
                 <li><a href="#contact" aria-label="Go to contact section">Contact</a></li>
             </ul>
+            <div class="social-icons icons-nav">
+                <ul>
+                    <li><a href="#contact" aria-label="Go to contact section"><i class="far fa-envelope"></i></a></li>
+                    <li><a href="https://twitter.com/andrea_codes" aria-label="Go to Andrea's Twitter"><i
+                                class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://medium.com/@andrea.maille" aria-label="Go to Andrea's Medium Blog"><i
+                                class="fab fa-medium"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/andreamaille/" aria-label="Go to Andrea's Linkedin"><i
+                                class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://codepen.io/andrea_codes/" aria-label="Go to Andrea's codepen"><i
+                                class="fab fa-codepen"></i></a></li>
+                </ul>
+            </div>
         </nav>
         <div class="header_main-content">
             <h1>Andrea Maille.</h1>
             <h2>Front End Developer</h2>
-            <div class="social-icons">
+            <div class="social-icons hero-icons">
                 <ul>
                     <li><a href="#contact" aria-label="Go to contact section"><i class="far fa-envelope"></i></a></li>
                     <li><a href="https://twitter.com/andrea_codes" aria-label="Go to Andrea's Twitter"><i
@@ -1196,7 +1212,25 @@
         </div>
 
     </header>
+    <main class="wrapper">
+        <section class="section_about" id="about">
+            <h3>About Me<span class="color-secondary">.</span></h3>
+            <div class="section_about-container">
+                <div class="section_about-img"></div>
+                <div class="section_about-text">
+                    <p>Hello! My name is Andrea Maille and I am a front end developer based in Toronto, Canada. I
+                        graduated from Juno College’s Immersive Web Development Program in 2019 and currently work at
+                        Commerce Dynamics developing ecommerce and loyalty websites for Fortune 500 companies.</p>
+                    <p>When I’m not coding, you can catch me listening to k-pop or late 90’s pop punk, playing
+                        cello,working on my Etsy Store or bullet journalling.</p>
+                </div>
+            </div>
+            <a href="#" class="btn">View Resume</a>
+        </section>
 
+
+
+    </main>
     <script src="./dist/bundle.js"></script>
 </body>
 

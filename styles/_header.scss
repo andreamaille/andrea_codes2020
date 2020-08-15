@@ -16,6 +16,7 @@ header {
     top: 30%;
     margin: 0 auto;
     text-align: center;
+    padding: 20px;
 }
 
 .social-icons ul {
@@ -25,4 +26,9 @@ header {
         font-size: $font-size-base;
         margin: 5px;
     }
+}
+
+.social-icons.hero-icons ul li {
+    font-size: 24px;
+    margin: 6px;
 }

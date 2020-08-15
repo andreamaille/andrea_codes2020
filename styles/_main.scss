@@ -11,6 +11,7 @@ ul, li {
 
 a {
     color: $black;
+    text-decoration: none;
     transition: color 0.2s ease;
     &:hover, 
     &:focus,
@@ -18,4 +19,8 @@ a {
         color: $secondary;
     }
 
+}
+
+.wrapper {
+    width: 80%;
 }
