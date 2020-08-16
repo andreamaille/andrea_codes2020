@@ -1,0 +1,15 @@
+.section_about-container {
+    display: flex;
+    justify-content:center;
+    .section_about-img {
+        width: 200px;
+        background:teal;
+        height: 200px;
+        background: url(../assets/headshot.png) top / cover no-repeat $white;
+        border-radius: 50%;
+    }
+    .section_about-text {
+        margin: 0 20px;
+        width:75%;
+    }
+}

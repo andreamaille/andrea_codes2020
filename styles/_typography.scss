@@ -39,6 +39,7 @@ h2 {
 
 h3 {
     @include displayFont (28);
+    text-align: center;
 }
 .color-secondary {
     color: $secondary;
