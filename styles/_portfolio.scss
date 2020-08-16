@@ -1,0 +1,68 @@
+
+.portfolio_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+    .portfolio_item-img {
+        width: 53%;
+    }
+
+    .portfolio_item-description {
+        width: 47%;
+    }
+
+    .portfolio_item-img {
+        background-color: $light-gray;
+        padding: 25px;
+    }
+}
+
+.portfolio_item:nth-child(even) {
+    flex-direction: row-reverse;
+    .portfolio_item-img {
+        position: relative;
+        left: 9%;
+        img {
+            position: relative;
+            right: 10%;
+        }
+    }
+    
+}
+
+.portfolio_item:nth-child(odd) {
+    .portfolio_item-img {
+        position: relative;
+        right: 9%;
+        img {
+            position: relative;
+            left: 10%;
+        }
+    }
+    
+}
+
+
+.portfolio_item-description {
+    // padding: 25px;
+    .project-tech {
+        display: flex;
+        margin-bottom: 15px;
+        li {
+            font-weight: $font-weight-normal;
+            background-color: $light-gray;
+            padding: 5px 8px;
+            margin-left: 5px;
+        }
+
+        li:first-child {
+            margin-left: 0;
+        }
+    }
+    
+    .project-links a:first-child {
+        margin-right: 10px;
+    }
+    
+}

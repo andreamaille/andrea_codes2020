@@ -38,9 +38,31 @@ h2 {
 }
 
 h3 {
-    @include displayFont (28);
+    @include displayFont (32);
     text-align: center;
 }
+
+h4 {
+    @include bodyFont (28);
+    text-transform: uppercase;
+    font-weight: $font-weight-semibold;
+    margin: 5px 0;
+    letter-spacing: 1px;
+}
+
+h6 {
+    @include bodyFont (20);
+    text-transform: uppercase;
+    color: $dark-gray;
+    font-weight: $font-weight-normal;
+    margin: 0;
+}
+
+.project-tech li {
+    font-weight: $font-weight-semibold;
+}
+
+
 .color-secondary {
     color: $secondary;
 }

@@ -1,12 +1,18 @@
 body {
     max-width: 1500px;
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
 ul, li {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+img {
+    width: 100%; 
+    max-width: 100%;
 }
 
 a {
@@ -22,7 +28,7 @@ a {
 }
 
 .wrapper {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
 }
 
