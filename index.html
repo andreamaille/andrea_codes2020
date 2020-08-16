@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/b37c5bc39b.js"></script>
+    <link rel="stylesheet"
+        href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link type="image/png" href="assets/favicon.png" rel="icon">
     <link href="./dist/style.css" rel="stylesheet">
 
     <title>andrea_codes</title>
@@ -1216,7 +1219,7 @@
     <main>
         <section class="section_about wrapper" id="about">
             <h3>About Me<span class="color-secondary">.</span></h3>
-            <div class="section_about-container">
+            <div class="section_about-container inner-wrapper">
                 <div class="section_about-img"></div>
                 <div class="section_about-text">
                     <p>Hello! My name is Andrea Maille and I am a front end developer based in Toronto, Canada. I
@@ -1224,9 +1227,10 @@
                         Commerce Dynamics developing ecommerce and loyalty websites for Fortune 500 companies.</p>
                     <p>When I’m not coding, you can catch me listening to k-pop or late 90’s pop punk, playing
                         cello,working on my Etsy Store or bullet journalling.</p>
+                    <a href="#" class="btn">View Resume</a>
                 </div>
             </div>
-            <a href="#" class="btn">View Resume</a>
+
         </section>
 
         <section class="section_portfolio wrapper" id="portfolio">
@@ -1309,7 +1313,7 @@
                             <li>Bootstrap 4</li>
                         </ul>
                         <div class="project-links">
-                            <a href="">
+                            <a href="" target="_blank">
                                 <i class="fas fa-external-link-alt"></i> View Live
                             </a>
                         </div>
@@ -1333,10 +1337,10 @@
                             <li>SASS</li>
                         </ul>
                         <div class="project-links">
-                            <a href="https://andreamaille.github.io/space-invaders">
+                            <a href="https://andreamaille.github.io/space-invaders" target="_blank">
                                 <i class="fas fa-external-link-alt"></i> View Live
                             </a>
-                            <a href="https://github.com/andreamaille/space-invaders">
+                            <a href="https://github.com/andreamaille/space-invaders" target="_blank">
                                 <i class="fab fa-github"></i>
                                 GitHub code
                             </a>
@@ -1372,10 +1376,10 @@
                             <li>JS</li>
                         </ul>
                         <div class="project-links">
-                            <a href="https://superduperlatives.github.io/tvWatcher/">
+                            <a href="https://superduperlatives.github.io/tvWatcher/" target="_blank">
                                 <i class="fas fa-external-link-alt"></i> View Live
                             </a>
-                            <a href="https://github.com/superduperlatives/tvWatcher">
+                            <a href="https://github.com/superduperlatives/tvWatcher" target="_blank">
                                 <i class="fab fa-github"></i>
                                 GitHub code
                             </a>
@@ -1383,45 +1387,120 @@
                     </div>
                 </div>
                 <!-- TV WATCHERS END -->
-                <!-- TV WATCHERS START -->
+                <!-- WHATS FOR DINNER START -->
                 <div class="portfolio_item">
                     <div class="portfolio_item-img">
-                        <img src="./assets/tv-watchers.png" alt="Screenshot of TV Watchers website">
+                        <img src="./assets/whats-for-dinner.png" alt="Screenshot of What's for Dinner? website">
                     </div>
                     <div class="portfolio_item-description">
-                        <h6>Spring 2019 <span class="color-secondary">&#8226;</span> Group Programming</h6>
-                        <h4>TV Watchers</h4>
-                        <p>App where users can search for TV shows and add them to lists. TV shows can be up/down voted
-                            on community boards to determine the best shows to watch.</p>
-                        <p>App built in collaboration with <strong><a href="http://www.jeffyeung.ca/"
-                                    aria-label="Go to Jeff Yeung's website" target="_blank">Jeff Yeung</a>, <a
-                                    href="http://www.tommycodes.ca" target="_blank"
-                                    aria-label="Go to Tommy Lay's website">Tommy
-                                    Lay</a>, <a href="http://www.brian-kan.ca/" target="_blank"
-                                    aria-label="Go to Brain Kan's website">Brain Kan</a></strong>
-                            <ul class="project-tech">
-                                <li>RestFUL API</li>
-                                <li>React</li>
-                                <li>Git</li>
-                                <li>JS</li>
-                            </ul>
-                            <div class="project-links">
-                                <a href="https://superduperlatives.github.io/tvWatcher/">
-                                    <i class="fas fa-external-link-alt"></i> View Live
-                                </a>
-                                <a href="https://github.com/superduperlatives/tvWatcher">
-                                    <i class="fab fa-github"></i>
-                                    GitHub code
-                                </a>
-                            </div>
+                        <h6>Spring 2019 <span class="color-secondary">&#8226;</span> Personal Project</h6>
+                        <h4>What's For Dinner?</h4>
+                        <p>A quiz based dinner recipe generator that takes user input to arrive a custom recipe.</p>
+                        <ul class="project-tech">
+                            <li>Firebase</li>
+                            <li>JavaScript ES6</li>
+                            <li>jQuery</li>
+                            <li>UI Design</li>
+                            <li>SASS</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://andreamaille.github.io/whats-for-dinner/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> View Live
+                            </a>
+                            <a href="https://github.com/andreamaille/whats-for-dinner" target="_blank">
+                                <i class="fab fa-github"></i>
+                                GitHub code
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <!-- TV WATCHERS END -->
+                <!-- WHAT'S FOR DINNER END -->
             </div>
-
-
         </section>
 
+        <section class="section_skills wrapper" id="skills">
+            <h3>Skills<span class="color-secondary">.</span></h3>
+            <div class="inner-wrapper">
+                <ul class="skills-icons">
+                    <li>
+                        <i class="devicon-html5-plain" aria-hidden="true"></i>
+                        <p>HTML5</p>
+                    </li>
+
+                    <li>
+                        <i class="devicon-css3-plain" aria-hidden="true"></i>
+                        <p>CSS3</p>
+                    </li>
+
+                    <li>
+                        <i class="devicon-javascript-plain" aria-hidden="true"></i>
+                        <p>JavaScript</p>
+                    </li>
+
+                    <li>
+                        <i class="devicon-react-original" aria-hidden="true"></i>
+                        <p>React</p>
+                    </li>
+
+                    <li>
+                        <i class="devicon-sass-original" aria-hidden="true"></i>
+                        <p>SASS</p>
+                    </li>
+
+                    <li>
+                        <i class="devicon-github-plain" aria-hidden="true"></i>
+                        <p>GitHub</p>
+                    </li>
+
+                    <li>
+                        <i class="devicon-git-plain" aria-hidden="true"></i>
+                        <p>Git</p>
+                    </li>
+
+                    <li>
+                        <i class="devicon-jquery-plain" aria-hidden="true"></i>
+                        <p>jQuery</p>
+                    </li>
+
+                    <li>
+                        <i class="devicon-photoshop-line" aria-hidden="true"></i>
+                        <p>Photoshop</p>
+                    </li>
+                    <li>
+                        <i class="devicon-inkscape-plain" aria-hidden="true"></i>
+                        <p>Inkscape</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-cogs"></i>
+                        <p>APIs</p>
+                    </li>
+                    <li>
+                        <i class="fab fa-google"></i>
+                        <p>Firebase</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-universal-access"></i>
+                        <p>Accessibility</p>
+                    </li>
+                    <li>
+                        <i class="devicon-apache-line"></i>
+                        <p>Apache Velocity</p>
+                    </li>
+                    <li>
+                        <i class="devicon-bootstrap-plain"></i>
+                        <p>Bootstrap</p>
+                    </li>
+                    <li>
+                        <i class="fab fa-adobe"></i>
+                        <p>Adobe Xd</p>
+                    </li>
+                    <li>
+                        <i class="devicon-webpack-plain"></i>
+                        <p>Webpack 4</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
     </main>
     <script src="./dist/bundle.js"></script>
