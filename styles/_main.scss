@@ -27,6 +27,10 @@ a {
 
 }
 
+button {
+    border: none;
+}
+
 .wrapper {
     width: 85%;
     margin: 0 auto;
@@ -44,7 +48,6 @@ a {
     color: $white;
     transition: background-color 0.2s ease;
     padding: 8px; 
-    border-radius: 25px;
     &:hover {
         background-color: $secondary;
         color: $white;

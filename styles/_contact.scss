@@ -1,0 +1,48 @@
+.section_contact {
+    padding: 75px 0;
+    background: linear-gradient(180deg, rgba(245,245,245,1) 50%, rgba(255,255,255,1) 50%);
+}
+
+.section_contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white;
+    box-shadow: $box-shadow;
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+    .section_contact-info,
+    .section_contact-form {
+        width: 48%;
+    }
+}
+
+.section_contact-info {
+    padding: 25px;
+    p {
+        color: $dark-gray;
+    }
+}
+
+.section_contact-form form {
+    input, 
+    textarea,
+    label,
+    button {
+        width: 100%;
+    }
+
+    input, 
+    textarea,
+    label {
+        padding: 8px 5px;
+        border: none;
+        border-bottom: 1px solid $dark-gray;
+    }
+
+    button {
+        padding: 8px;
+        margin-top:10px;
+    }
+}

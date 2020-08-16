@@ -62,7 +62,20 @@ h6 {
     font-weight: $font-weight-semibold;
 }
 
-
 .color-secondary {
     color: $secondary;
+}
+
+.section_contact-info h5 {
+    @include displayFont (75);
+    margin:0;
+}
+
+footer h3 {
+    @include displayFont (24);
+}
+
+footer p {
+    @include bodyFont (16);
+    text-align: center;
 }

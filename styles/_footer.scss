@@ -1,0 +1,19 @@
+footer {
+    background-color: $black;
+    padding: 20px 0;
+    h3,
+    a,
+    p,
+    .social-icons{
+        color: $white;
+    }
+
+    h3,
+    p {
+        margin: 0;
+    }
+
+    .social-icons ul li {
+        font-size: 14px;
+    }
+}
