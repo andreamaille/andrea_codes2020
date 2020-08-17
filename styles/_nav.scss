@@ -1,15 +1,15 @@
 nav {
     position: fixed;
-    z-index: 20;
+    z-index: 30;
     // // position: fixed;
     // margin: 0 auto;
-    background-color:$white;
+    background-color:$light-gray;
     // display:flex;
     // justify-content: space-around;
     // align-items: center;
     // z-index: 30;
-    // width:100%;
-    // max-width: 100%;
+    width:100%;
+    max-width: 100%;
     // right:0;
     // left:0;
     // box-shadow: $box-shadow;
@@ -32,14 +32,12 @@ nav {
 .d-none {
     display: none;
 }
-.mobile-toggle {
-    display: flex;
-    justify-content: center;
-}
+
+
 
 .hamburger {
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     top: 4%;
     right: 4%;
     height: 50px;
@@ -83,24 +81,20 @@ nav {
     }
 }
 
-.nav_links {
+.nav_items {
     display: none;
-    transition: .25s 0s ease-in-out;
-    animation: slide-in-blurred-top 0.2s ease;
-
+    background-color: $light-gray;
 }
 
-.nav_links.show {
+.nav_items.show {
     display: block;
-    position: absolute;
-    background: $light-gray;
-    top:0;
-    right: 0;
-    bottom:0;
-    left: 0;
-    z-index: 30;
+    height: 100vh;
     ul {
         text-align: center;
         margin-top: 50px;
     }
+}
+
+.nav-items.d-none {
+    display: none;
 }

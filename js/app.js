@@ -6,11 +6,21 @@ const app = {};
 
 app.hamburger = () => {
   const hamburger = document.querySelector('.hamburger');
-  const nav = document.querySelector('.nav_links');
+  const nav = document.querySelector('.nav_items');
 
   hamburger.addEventListener('click', function() {
     this.classList.toggle('active');
     nav.classList.toggle('show');
+  });
+
+  const anchors = document.querySelectorAll('.nav_items a');
+
+  anchors.forEach(anchor => {
+    anchor.addEventListener('click', function() {
+      nav.classList.toggle('show');
+      hamburger.classList.remove('active');
+      nav.classList.toggle('d-none');
+    });
   });
 };
 
