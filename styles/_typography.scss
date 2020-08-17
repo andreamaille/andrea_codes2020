@@ -39,7 +39,7 @@ h2 {
 
 h3 {
     @include displayFont (32);
-    text-align: center;
+    // text-align: center;
 }
 
 h4 {
@@ -58,12 +58,22 @@ h6 {
     margin: 0;
 }
 
+nav ul li {
+    text-transform: uppercase;
+}
+
 .project-tech li {
     font-weight: $font-weight-semibold;
 }
 
 .color-secondary {
     color: $secondary;
+}
+
+
+.blog_card-title{
+    @include displayFont (24);
+    text-transform: capitalize;
 }
 
 .section_contact-info h5 {

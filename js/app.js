@@ -1,19 +1,42 @@
 import '../styles/style.scss';
 import gsap from 'gsap';
+import SmoothScroll from 'smooth-scroll';
 
-const pathArray = document.querySelectorAll('path');
+const app = {};
 
-// gsap.set(path, { strokeDasharray: 400, strokeDashoffset: 205 });
+app.hamburger = () => {
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('.nav_links');
 
-// gsap.fromTo(path, 3, { strokeDashoffset: 205 }, { strokeDashoffset: 0 });
+  hamburger.addEventListener('click', function() {
+    this.classList.toggle('active');
+    nav.classList.toggle('show');
+  });
+};
 
-// TweenMax.set(path, { strokeDasharray: l });
-// TweenMax.fromTo(path, 3, { strokeDashoffset: l }, { strokeDashoffset: 0 });
-pathArray.forEach(path => {
-  console.log(path);
-  const l = path.getTotalLength();
+app.svgAnimation = () => {
+  const svgPaths = document.querySelectorAll('path');
 
-  gsap.set(path, { strokeDasharray: l });
+  svgPaths.forEach(path => {
+    const length = path.getTotalLength();
 
-  gsap.fromTo(path, 5, { strokeDashoffset: l }, { strokeDashoffset: 0 });
-});
+    gsap.set(path, { strokeDasharray: length });
+    gsap.fromTo(path, 5, { strokeDashoffset: length }, { strokeDashoffset: 0 });
+  });
+};
+
+app.smoothScroll = () => {
+  const scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 500,
+    speedAsDuration: true,
+    easing: 'swing',
+  });
+};
+
+app.init = () => {
+  app.svgAnimation();
+  app.hamburger();
+  app.smoothScroll();
+};
+
+app.init();

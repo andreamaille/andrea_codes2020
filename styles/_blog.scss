@@ -3,6 +3,11 @@
     justify-content: space-between;
     .section_blog-card {
         width: 32%;
+        box-shadow: $box-shadow;
+    }
+
+    .blog_card-description {
+        padding: 20px;
     }
 }
 
