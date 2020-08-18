@@ -47,6 +47,8 @@ app.init = () => {
   app.svgAnimation();
   app.hamburger();
   app.smoothScroll();
+
+  const svgPaths = document.querySelectorAll('path');
 };
 
 app.init();

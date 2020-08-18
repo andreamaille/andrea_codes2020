@@ -1,14 +1,15 @@
 header {
     height: 100vh;
     overflow: hidden;
-    background-color: $white;
+    // background-color: $white;
     position: relative; 
+    background: url(../assets/bg-grid.jpg) top / contain repeat-x $white;
 }
 
 .header_main-content {
     position: absolute;
     background: $white;
-    border: 1px solid $black;
+    border: 2px solid $black;
     z-index: 10;
     width: 40%; 
     right: 0;
