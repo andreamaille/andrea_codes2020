@@ -3,7 +3,7 @@ header {
     overflow: hidden;
     // background-color: $white;
     position: relative; 
-    background: url(../assets/bg-grid.jpg) top / contain repeat-x $white;
+    background: url(../assets/bg-grid.jpg) top / cover no-repeat $white;
 }
 
 .header_main-content {
@@ -11,7 +11,7 @@ header {
     background: $white;
     border: 2px solid $black;
     z-index: 10;
-    width: 40%; 
+    width: 85%; 
     right: 0;
     left: 0;
     top: 30%;
@@ -32,4 +32,17 @@ header {
 .social-icons.hero-icons ul li {
     font-size: 24px;
     margin: 6px;
+}
+
+
+@media (min-width:$breakpoint-md) { 
+    .header_main-content {
+        width: 60%;
+    }
+}
+
+@media (min-width:$breakpoint-lg) { 
+    .header_main-content {
+        width: 40%;
+    }
 }
