@@ -24,7 +24,6 @@ a {
     &:active {
         color: $secondary;
     }
-
 }
 
 section {
@@ -35,12 +34,12 @@ button {
 }
 
 .wrapper {
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
 }
 
 .inner-wrapper {
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -72,6 +71,13 @@ button {
     }
 }
 
-.show {
-    display: block;
+
+@media (min-width:$breakpoint-md) { 
+    .inner-wrapper {
+        width: 85%;
+    }
+
+    .wrapper {
+        width: 85%;
+    }
 }
