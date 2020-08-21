@@ -71,29 +71,45 @@ const sliderImages = document.querySelectorAll('.slide-in');
 function checkSlide() {
   sliderImages.forEach(sliderImage => {
     // half way through the image
-    const slideInAt =
-      window.scrollY + window.innerHeight - sliderImage.height / 2;
+
+    const add = window.scrollY + window.innerHeight;
+    const sub = sliderImage.height / 2;
+    const slideInAt = add - sub;
+
+    const offsetTop = app.getOffsetTop(sliderImage);
+
+    console.log(offsetTop);
     // bottom of the image
-    const imageBottom = sliderImage.offsetTop + sliderImage.height;
-    const isHalfShown = slideInAt > sliderImage.offsetTop;
+    const imageBottom = offsetTop + sliderImage.height;
+    const isHalfShown = slideInAt > offsetTop;
+
     const isNotScrolledPast = window.scrollY < imageBottom;
+
     if (isHalfShown && isNotScrolledPast) {
-      console.log('true');
       sliderImage.classList.add('active');
     } else {
-      console.log('false');
       sliderImage.classList.remove('active');
     }
   });
 }
 
-window.addEventListener('scroll', debounce(checkSlide));
+app.getOffsetTop = element => {
+  let offsetTop = 0;
+  while (element) {
+    offsetTop += element.offsetTop;
+    element = element.offsetParent;
+  }
+  return offsetTop;
+};
 
 app.init = () => {
   app.svgAnimation();
   app.shadowAnimation();
   app.hamburger();
   app.smoothScroll();
+
+  window.addEventListener('scroll', debounce(checkSlide));
+
   // app.slideImages();
 };
 
