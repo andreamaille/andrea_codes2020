@@ -24,17 +24,6 @@ app.hamburger = () => {
   });
 };
 
-app.svgAnimation = () => {
-  const svgPaths = document.querySelectorAll('header path');
-
-  svgPaths.forEach(path => {
-    const length = path.getTotalLength();
-
-    gsap.set(path, { strokeDasharray: length });
-    gsap.fromTo(path, 5, { strokeDashoffset: length }, { strokeDashoffset: 0 });
-  });
-};
-
 app.shadowAnimation = () => {
   setTimeout(() => {
     const headerContainer = document.querySelector('.header_main-content');
@@ -50,7 +39,7 @@ app.smoothScroll = () => {
   });
 };
 
-function debounce(func, wait = 20, immediate = true) {
+app.debounce = (func, wait = 20, immediate = true) => {
   let timeout;
   return function() {
     const context = this;
@@ -64,34 +53,54 @@ function debounce(func, wait = 20, immediate = true) {
     timeout = setTimeout(later, wait);
     if (callNow) func.apply(context, args);
   };
-}
+};
 
-const sliderImages = document.querySelectorAll('.slide-in');
+const sliderImages = document.querySelectorAll('.draw-svg');
 
-function checkSlide() {
+app.isElementShown = () => {
   sliderImages.forEach(sliderImage => {
-    // half way through the image
-
-    const add = window.scrollY + window.innerHeight;
-    const sub = sliderImage.height / 2;
-    const slideInAt = add - sub;
-
+    // get dimensions of element
     const offsetTop = app.getOffsetTop(sliderImage);
+    const height = app.getElementHeight(sliderImage);
 
-    console.log(offsetTop);
+    // half way through the image
+    const slideInAt = window.scrollY + window.innerHeight - height / 2;
+
     // bottom of the image
-    const imageBottom = offsetTop + sliderImage.height;
+    const imageBottom = offsetTop + height;
     const isHalfShown = slideInAt > offsetTop;
-
     const isNotScrolledPast = window.scrollY < imageBottom;
 
-    if (isHalfShown && isNotScrolledPast) {
-      sliderImage.classList.add('active');
+    if (isHalfShown) {
+      // sliderImage.classList.add('active');
+      const svgPaths = sliderImage.querySelectorAll('svg path');
+      app.drawSVG(svgPaths);
     } else {
-      sliderImage.classList.remove('active');
+      // sliderImage.classList.remove('active');
     }
   });
-}
+};
+
+app.drawSVG = paths => {
+  paths.forEach(path => {
+    if (!path.classList.contains('active')) {
+      const length = path.getTotalLength();
+      path.classList.add('active');
+      gsap.set(path, { strokeDasharray: length });
+      gsap.fromTo(
+        path,
+        5,
+        { strokeDashoffset: length },
+        { strokeDashoffset: 0 }
+      );
+    }
+  });
+};
+
+app.getElementHeight = element => {
+  const rect = element.getBoundingClientRect();
+  return rect.height;
+};
 
 app.getOffsetTop = element => {
   let offsetTop = 0;
@@ -103,14 +112,15 @@ app.getOffsetTop = element => {
 };
 
 app.init = () => {
-  app.svgAnimation();
   app.shadowAnimation();
   app.hamburger();
   app.smoothScroll();
 
-  window.addEventListener('scroll', debounce(checkSlide));
+  const headerSvgPaths = document.querySelectorAll('header path');
 
-  // app.slideImages();
+  app.drawSVG(headerSvgPaths);
+
+  window.addEventListener('scroll', app.debounce(app.isElementShown));
 };
 
 app.init();

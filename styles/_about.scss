@@ -1,10 +1,13 @@
 .section_about {
     position: relative;
-    .about-floral {
+    .draw-svg {
         width: 235px;
         position: absolute;
         bottom:-20%;
         right:-5%;
+        svg {
+            width: 100%;
+        }
     } 
 }
 .section_about-container {
