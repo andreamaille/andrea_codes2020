@@ -4,11 +4,31 @@
     justify-content: space-between;
     flex-wrap: wrap;
     li {
+        width: 20%;
         margin: 10px;
         padding: 10px;
         text-align: center;
         i {
+            font-size: 3rem;
+        }
+
+        img, i {
+            display:block;
+            height: 64px;
+        }
+    }
+}
+
+
+@media (min-width:$breakpoint-md) {
+    .skills-icons {
+
+    li {
+        width: 13%;
+
+        i {
             font-size: 4rem;
         }
     }
+}
 }

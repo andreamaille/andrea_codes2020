@@ -25,6 +25,7 @@
         position: relative;
         right: 9%;
         img {
+            box-shadow: $box-shadow;
             position: relative;
             left: 10%;
         }
@@ -38,13 +39,18 @@
     .project-tech {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: start;
         li {
             font-weight: $font-weight-normal;
             background-color: $light-gray;
             padding: 5px 8px;
             margin-bottom: 8px;
+            margin-right: 5px;
         }
+    }
+
+    .project-links {
+        margin: 15px 0;
     }
     
     .project-links a:first-child {
