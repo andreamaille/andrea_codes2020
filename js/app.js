@@ -55,9 +55,9 @@ app.debounce = (func, wait = 20, immediate = true) => {
   };
 };
 
-const sliderImages = document.querySelectorAll('.draw-svg');
-
 app.isElementShown = () => {
+  const sliderImages = document.querySelectorAll('.draw-svg');
+
   sliderImages.forEach(sliderImage => {
     // get dimensions of element
     const offsetTop = app.getOffsetTop(sliderImage);
@@ -72,7 +72,7 @@ app.isElementShown = () => {
     const isNotScrolledPast = window.scrollY < imageBottom;
 
     if (isHalfShown) {
-      // sliderImage.classList.add('active');
+      sliderImage.classList.add('show');
       const svgPaths = sliderImage.querySelectorAll('svg path');
       app.drawSVG(svgPaths);
     } else {
@@ -117,7 +117,6 @@ app.init = () => {
   app.smoothScroll();
 
   const headerSvgPaths = document.querySelectorAll('header path');
-
   app.drawSVG(headerSvgPaths);
 
   window.addEventListener('scroll', app.debounce(app.isElementShown));

@@ -20,9 +20,9 @@
     }
     .section_about-text {
         margin: 0 20px;
-        // .section_about-resume {
-        //     text-align: center;
-        // }
+        .section_about-resume {
+            font-weight: $font-weight-semibold;
+        }
     }
 }
 

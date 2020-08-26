@@ -8,10 +8,10 @@
     //   margin-left: 20px;
     // }
 
-    // .draw-svg {
-    //   opacity: 0;
-    //   transition: all .5s;
-    // }
+    .draw-svg {
+      opacity: 0;
+      // transition: all .5s;
+    }
 
     // .align-left.draw-svg {
     //   transform: translateX(-30%) scale(0.95);
@@ -21,10 +21,10 @@
     //   transform: translateX(30%) scale(0.95);
     // }
 
-    // .draw-svg.active {
-    //   opacity: 1;
-    //   transform: translateX(0%) scale(1);
-    // }
+    .draw-svg.show {
+      opacity: 1;
+      // transform: translateX(0%) scale(1);
+    }
 
 
 
