@@ -70,19 +70,24 @@ nav ul li {
     color: $secondary;
 }
 
-
 .blog_card-title{
     @include displayFont (24);
     text-transform: capitalize;
 }
 
+.blog_card-description h6,
+.blog_card-description .btn-sm {
+    @include bodyFont (16);
+}
+
 .section_contact-info h5 {
-    @include displayFont (75);
+    @include displayFont (50);
     margin:0;
 }
 
 footer h3 {
     @include displayFont (24);
+    text-align: center;
 }
 
 footer p {
@@ -95,5 +100,9 @@ footer p {
     h3 {
         text-align: center;
         margin-left: 0;
+    }
+
+    .section_contact-info h5 {
+        @include displayFont (75);
     }
 }

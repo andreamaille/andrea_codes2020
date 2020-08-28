@@ -4,22 +4,16 @@
 }
 
 .section_contact-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: $white;
     box-shadow: $box-shadow;
     padding: 20px;
     width: 90%;
     margin: 0 auto;
-    .section_contact-info,
-    .section_contact-form {
-        width: 48%;
-    }
+
 }
 
 .section_contact-info {
-    padding: 25px;
+    padding: 15px;
     p {
         color: $dark-gray;
     }
@@ -44,5 +38,22 @@
     button {
         padding: 8px;
         margin-top:10px;
+    }
+}
+
+
+@media (min-width:$breakpoint-md) {
+    .section_contact-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .section_contact-info,
+        .section_contact-form {
+            width: 48%;
+        }
+    }
+
+    .section_contact-info {
+        padding: 25px;
     }
 }

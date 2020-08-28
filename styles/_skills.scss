@@ -4,31 +4,40 @@
     justify-content: space-between;
     flex-wrap: wrap;
     li {
-        width: 20%;
-        margin: 10px;
+        width: 32%;
         padding: 10px;
         text-align: center;
         i {
             font-size: 3rem;
         }
-
         img, i {
             display:block;
+            height: 40px;
+        }
+    }
+}
+
+@media (min-width:$breakpoint-sm) {
+    .skills-icons li {
+        width: 17%;
+    }
+}
+
+@media (min-width:$breakpoint-md) {
+    .skills-icons li {
+        width: 14%;
+        margin: 10px;
+        i {
+            font-size: 4rem;
+        }
+        img, i {
             height: 64px;
         }
     }
 }
 
-
-@media (min-width:$breakpoint-md) {
-    .skills-icons {
-
-    li {
+@media (min-width:$breakpoint-lg) {
+    .skills-icons li {
         width: 13%;
-
-        i {
-            font-size: 4rem;
-        }
     }
-}
 }
