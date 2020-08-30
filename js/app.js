@@ -34,7 +34,7 @@ app.shadowAnimation = () => {
 app.scrollAnimation = () => {
   setTimeout(() => {
     const scrollIcon = document.querySelector(".scroll-icon-container");
-    scrollIcon.classList.remove("d-none");
+    scrollIcon.classList.remove("hide");
   }, 3000);
 };
 

@@ -1,11 +1,19 @@
-
 .portfolio_item {
     padding: 25px 0;
+    position: relative;
     .portfolio_item-img {
         background-color: $light-gray;
         padding: 10px;
     }
 }
+
+.portfolio_floral-1,
+.portfolio_floral-2 {
+    display: none;
+}
+
+
+
 
 .portfolio_item:nth-child(even) {
     flex-direction: row-reverse;
@@ -60,7 +68,7 @@
 }
 
 
-@media (min-width:$breakpoint-md) { 
+@media (min-width:$breakpoint-lg) { 
     .portfolio_item {
         display: flex;
         justify-content: space-between;
@@ -76,5 +84,38 @@
         .portfolio_item-img {
             padding: 25px;
         }
+    }
+
+    .portfolio_floral-1,
+    .portfolio_floral-2 {
+        display: block;
+        position: absolute;
+        width: 400px;
+        z-index: -10;
+    }
+
+    .portfolio_floral-1 {
+        right: -30%;
+        transform: rotate(-96deg);
+        bottom: -19%;
+    }
+
+    .portfolio_floral-2 {
+        bottom: -16%;
+        left: -42%;
+        transform: rotate(180deg);
+    }
+}
+
+@media (min-width:$breakpoint-xl) { 
+    .portfolio_floral-1 {
+        z-index: 10;
+    }
+    .portfolio_floral-2 {
+        left: -30%;
+    }
+
+    .portfolio_floral-1 {
+        right: -22%;
     }
 }

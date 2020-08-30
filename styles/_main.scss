@@ -5,6 +5,10 @@ body {
     height: 100%;
 }
 
+main {
+    overflow: hidden;
+}
+
 ul, li {
     list-style-type: none;
     margin: 0;

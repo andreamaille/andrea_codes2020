@@ -26,9 +26,10 @@
       // transform: translateX(0%) scale(1);
     }
 
-.d-none {
+.scroll-icon-container.hide {
   display: none;
 }
+
 .scroll-icon-container {
   position: absolute;
   right:0;
@@ -49,7 +50,7 @@
   opacity: 0;
   transform: scale3d(0.5, 0.5, 0.5);
   animation: move 3s ease-out infinite;
-  z-index: 20;
+  z-index: 30;
 }
 
 .chevron:first-child {
