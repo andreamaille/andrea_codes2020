@@ -1,24 +1,26 @@
 header {
     height: 100vh;
+    max-height: 875px;
     overflow: hidden;
-    // background-color: $white;
     position: relative; 
     background: url(../assets/bg-grid.jpg) top / cover no-repeat $white;
-}
-
-.header_main-content {
-    position: absolute;
-    background: $white;
-    border: 2px solid $black;
-    // box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.75);
-    z-index: 10;
-    width: 85%; 
-    right: 0;
-    left: 0;
-    top: 30%;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
+    .header_main-content {
+        position: absolute;
+        background: $white;
+        border: 2px solid $black;
+        z-index: 10;
+        width: 85%; 
+        right: 0;
+        left: 0;
+        top: 30%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 20px;
+        .social-icons.hero-icons ul li {
+            font-size: 24px;
+            margin: 6px;
+        }
+    }
 }
 
 .social-icons ul {
@@ -29,12 +31,6 @@ header {
         margin: 5px;
     }
 }
-
-.social-icons.hero-icons ul li {
-    font-size: 24px;
-    margin: 6px;
-}
-
 
 @media (min-width:$breakpoint-md) { 
     .header_main-content {

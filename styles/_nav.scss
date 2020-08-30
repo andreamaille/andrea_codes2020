@@ -2,13 +2,17 @@ nav {
     position: fixed;
     z-index: 50;
     width:100%;
-    max-width: 100%;
+    max-width: 1500px;
     h3 {
         margin: 0;
         margin-left: 6%;
-        padding-top: 4%;
+        padding-top: 6%;
         position: relative;
         z-index: 40;
+    }
+
+    ul li {
+        margin: 20px 0;
     }
 }
 
@@ -39,6 +43,7 @@ nav {
             background: $black;
         }
     }
+    
     span {
         cursor: pointer;
         background-color:$black;
@@ -65,7 +70,7 @@ nav {
 
 
 
-@media (max-width:$breakpoint-md) {
+@media (max-width:$breakpoint-lg) {
     .nav_items.show {
         display: block;
         height: 100vh;
@@ -80,8 +85,13 @@ nav {
     }
 }
 
-
 @media (min-width:$breakpoint-md) {
+    nav h3 {
+        margin-left: 0;
+    }
+}
+
+@media (min-width:$breakpoint-lg) {
     .hamburger {
         display: none;
     }
@@ -94,7 +104,6 @@ nav {
         background-color:$white;
         box-shadow: $box-shadow;
         h3 {
-            margin-left: 0;
             padding-top: 0;
             margin: 15px 0;
         }
