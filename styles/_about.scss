@@ -1,9 +1,7 @@
 .section_about {
     position: relative;
     .draw-svg {
-        
         position: absolute;
-
         svg {
             width: 100%;
         }
@@ -11,13 +9,11 @@
 }
 
 .draw-svg.about-floral-1 {
-    width: 160px;
-    top: 2%;
-    right:-13%;
-    transform: rotate(34deg);
+    width: 230px;
+    top: -8%;
+    right:-10%;
+    transform: rotate(63deg);
 }
-
-
 
 .section_about-container {
     .section_about-img {
@@ -36,6 +32,15 @@
     }
 }
 
+@media (min-width:$breakpoint-md) { 
+    .draw-svg.about-floral-1 {
+        width: 235px;
+        top: unset;
+        bottom: -20%;
+        right:-4%;
+        transform: rotate(0deg);
+    }
+}
 
 @media (min-width:$breakpoint-lg) { 
     .section_about-container {
@@ -54,13 +59,11 @@
         margin-right: 10px;
     }
 
-
-    .draw-svg.about-floral-1 {
-        width: 235px;
-        top: unset;
-        bottom: -36%;
-        right:-4%;
-        transform: rotate(0deg);
-    }
-
+    // .draw-svg.about-floral-1 {
+    //     width: 235px;
+    //     top: unset;
+    //     bottom: -36%;
+    //     right:-4%;
+    //     transform: rotate(0deg);
+    // }
 }
