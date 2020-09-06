@@ -1,10 +1,13 @@
 header {
+    background: url(../assets/bg-grid.jpg) top / cover no-repeat $white;
+    position: relative; 
     height: 100vh;
     max-height: 850px;
     overflow: hidden;
-    position: relative; 
-    background: url(../assets/bg-grid.jpg) top / cover no-repeat $white;
     .header_main-content {
+        background: $white;
+        border: 2px solid $black;
+        text-align: center;
         width: 85%; 
         max-width: 600px;
         position: absolute;
@@ -12,11 +15,8 @@ header {
         right: 0;
         left: 0;
         z-index: 10;
-        background: $white;
-        border: 2px solid $black;
         margin: 0 auto;
         padding: 20px;
-        text-align: center;
         .social-icons.hero-icons ul li {
             font-size: 24px;
             margin: 6px;

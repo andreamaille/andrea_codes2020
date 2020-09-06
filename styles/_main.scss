@@ -34,6 +34,7 @@ a {
 section {
     padding: 25px 0;
 }
+
 button {
     border: none;
 }
@@ -49,10 +50,10 @@ button {
 }
 
 .btn {
-    text-align:center;
-    text-transform: uppercase;
     background-color: $black;
     color: $white;
+    text-align:center;
+    text-transform: uppercase;
     transition: background-color 0.2s ease;
     padding: 8px; 
     &:hover {

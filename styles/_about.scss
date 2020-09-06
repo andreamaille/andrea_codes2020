@@ -17,16 +17,15 @@
 
 .section_about-container {
     .section_about-img {
-        margin: 0 auto;
-        width: 230px;
-        height: 230px;
         background: url(../assets/headshot.png) top / cover no-repeat $white;
         border-radius: 50%;
+        width: 230px;
+        height: 230px;
+        margin: 0 auto;
     }
     .section_about-text {
         margin: 0 20px;
         .section_about-resume a {
-            
             font-weight: $font-weight-semibold;
         }
     }
@@ -58,12 +57,4 @@
         width: 25%;
         margin-right: 10px;
     }
-
-    // .draw-svg.about-floral-1 {
-    //     width: 235px;
-    //     top: unset;
-    //     bottom: -36%;
-    //     right:-4%;
-    //     transform: rotate(0deg);
-    // }
 }

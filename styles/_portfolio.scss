@@ -12,9 +12,6 @@
     display: none;
 }
 
-
-
-
 .portfolio_item:nth-child(even) {
     flex-direction: row-reverse;
     .portfolio_item-img {
@@ -41,7 +38,6 @@
     
 }
 
-
 .portfolio_item-description {
     margin: 10px;
     .project-tech {
@@ -66,7 +62,6 @@
     }
     
 }
-
 
 @media (min-width:$breakpoint-lg) { 
     .portfolio_item {
