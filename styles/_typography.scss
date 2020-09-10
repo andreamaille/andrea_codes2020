@@ -50,7 +50,7 @@ h4 {
     letter-spacing: 1px;
 }
 
-h6 {
+.subheading {
     @include bodyFont (20);
     text-transform: uppercase;
     color: $dark-gray;
@@ -75,7 +75,7 @@ nav ul li {
     text-transform: capitalize;
 }
 
-.blog_card-description h6,
+.blog_card-description .subheading,
 .blog_card-description .btn-sm {
     @include bodyFont (16);
 }

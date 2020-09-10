@@ -1,40 +1,40 @@
-import "../styles/style.scss";
-import gsap from "gsap";
-import SmoothScroll from "smooth-scroll";
+import '../styles/style.scss';
+import gsap from 'gsap';
+import SmoothScroll from 'smooth-scroll';
 
 const app = {};
 
 app.hamburger = () => {
-  const hamburger = document.querySelector(".hamburger");
-  const nav = document.querySelector(".nav_items");
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('.nav_items');
 
-  hamburger.addEventListener("click", function() {
-    this.classList.toggle("active");
-    nav.classList.toggle("show");
+  hamburger.addEventListener('click', function() {
+    this.classList.toggle('active');
+    nav.classList.toggle('show');
   });
 
-  const anchors = document.querySelectorAll(".nav_items a");
+  const anchors = document.querySelectorAll('.nav_items a');
 
   anchors.forEach(anchor => {
-    anchor.addEventListener("click", function() {
-      nav.classList.toggle("show");
-      hamburger.classList.remove("active");
-      nav.classList.toggle("d-none");
+    anchor.addEventListener('click', function() {
+      nav.classList.toggle('show');
+      hamburger.classList.remove('active');
+      nav.classList.toggle('d-none');
     });
   });
 };
 
 app.shadowAnimation = () => {
   setTimeout(() => {
-    const headerContainer = document.querySelector(".header_main-content");
-    headerContainer.classList.add("shadow-pop-br");
+    const headerContainer = document.querySelector('.header_main-content');
+    headerContainer.classList.add('shadow-pop-br');
   }, 2000);
 };
 
 app.scrollAnimation = () => {
   setTimeout(() => {
-    const scrollIcon = document.querySelector(".scroll-icon-container");
-    scrollIcon.classList.remove("hide");
+    const scrollIcon = document.querySelector('.scroll-icon-container');
+    scrollIcon.classList.remove('hide');
   }, 3000);
 };
 
@@ -42,7 +42,7 @@ app.smoothScroll = () => {
   const scroll = new SmoothScroll('a[href*="#"]', {
     speed: 500,
     speedAsDuration: true,
-    easing: "swing"
+    easing: 'swing'
   });
 };
 
@@ -63,7 +63,7 @@ app.debounce = (func, wait = 20, immediate = true) => {
 };
 
 app.isElementShown = () => {
-  const sliderImages = document.querySelectorAll(".draw-svg");
+  const sliderImages = document.querySelectorAll('.draw-svg');
 
   sliderImages.forEach(sliderImage => {
     // get dimensions of element
@@ -79,8 +79,8 @@ app.isElementShown = () => {
     const isNotScrolledPast = window.scrollY < imageBottom;
 
     if (isHalfShown) {
-      sliderImage.classList.add("show");
-      const svgPaths = sliderImage.querySelectorAll("svg path");
+      sliderImage.classList.add('show');
+      const svgPaths = sliderImage.querySelectorAll('svg path');
       app.drawSVG(svgPaths);
     } else {
       // sliderImage.classList.remove('active');
@@ -90,10 +90,10 @@ app.isElementShown = () => {
 
 app.drawSVG = paths => {
   paths.forEach(path => {
-    if (!path.classList.contains("active")) {
+    if (!path.classList.contains('active')) {
       const length = path.getTotalLength();
-      path.classList.add("active");
-      gsap.set(path, { strokeDasharray: length });
+      path.classList.add('active');
+      gsap.set(path, { strokeDasharray: length, opacity: 1 });
       gsap.fromTo(path, 5, { strokeDashoffset: length }, { strokeDashoffset: 0 });
     }
   });
@@ -119,10 +119,18 @@ app.init = () => {
   app.hamburger();
   app.smoothScroll();
 
-  const headerSvgPaths = document.querySelectorAll("header path");
+  const headerSvgPaths = document.querySelectorAll('header path');
   app.drawSVG(headerSvgPaths);
 
-  window.addEventListener("scroll", app.debounce(app.isElementShown));
+  window.addEventListener('scroll', app.debounce(app.isElementShown));
 };
 
-app.init();
+app.ready = fn => {
+  if (document.readyState != "loading") {
+    fn();
+  } else {
+    document.addEventListener("DOMContentLoaded", fn);
+  }
+};
+
+app.ready(app.init);
